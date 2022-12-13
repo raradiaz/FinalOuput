@@ -1,0 +1,521 @@
+    html{
+        scroll-behavior: smooth;
+        height: fit-content;
+    }
+
+
+    body{
+         background-color: #181818;
+         justify-content: center;
+         align-items: center;
+         
+
+
+          --light: hsl(220, 50%, 90%);
+          --primary: hsl(255, 30%, 55%);
+          --focus: hsl(210, 90%, 50%);
+          --border-color: hsla(0, 0%, 100%, .2);
+          --global-background: hsl(220, 25%, 10%);
+          --background: linear-gradient(to right, hsl(210, 30%, 20%), hsl(255, 30%, 25%));
+          --shadow-1: hsla(236, 50%, 50%, .3);
+          --shadow-2: hsla(236, 50%, 50%, .4);
+    }
+    
+        /* === removing default button style ===*/
+        .button {
+          margin: 0;
+          height: auto;
+          background: transparent;
+          padding: 0;
+          border: none;
+        }
+
+        /* button styling */
+        .button {
+          --border-right: 6px;
+          --text-stroke-color: rgba(255,255,255,0.6);
+          --animation-color: #37FF8B;
+          --fs-size: 2.3em;
+          letter-spacing: 3px;
+          text-decoration: none;
+          font-size: var(--fs-size);
+          font-family: "Montserrat";
+          position: relative;
+          text-transform: uppercase;
+          color: transparent;
+          -webkit-text-stroke: 1px var(--text-stroke-color);
+        }
+        /* this is the text, when you hover on button */
+        .hover-text {
+          position: absolute;
+          box-sizing: border-box;
+          content: attr(data-text);
+          color: #F1EEE9;
+          width: 0%;
+          inset: 0;
+          border-right: var(--border-right) solid #F1EEE9;
+          overflow: hidden;
+          transition: 0.5s;
+          -webkit-text-stroke: 1px #F1EEE9;
+        }
+        /* hover */
+        .button:hover .hover-text {
+          width: 100%;
+          filter: drop-shadow(0 0 23px #F1EEE9)
+        }
+
+        .card {
+         --background: linear-gradient(to left, #5B42F3 0%, #AF40FF 100%);
+         width: 80%;
+         height: 120px;
+         padding: 5px;
+         border-radius: 8rem;
+         background: #f7ba2b;
+         background: var(--background);
+         z-index: 5;
+         margin-left: 10%;
+         margin-top: 3%;
+         
+
+        }
+
+
+        .card-info {
+         background: var(--color);
+         color: var(--color);
+         display: flex;
+         justify-content: left;
+         align-items: center;
+         width: 100%;
+         height: 100%;
+         overflow: visible;
+         border-radius: 8rem;
+         margin-left: 50px;
+        }
+
+        .card {
+         font-weight: bold;
+         letter-spacing: .1em;
+        }
+
+        .header {
+        width: inherit;
+        border-radius: 80px 80px 80px 80px;
+        padding: 20px;
+        margin: 40px;
+        }
+
+       #header {
+        width: inherit;
+        height: fit-content;
+        background-image: url("photos/header.jpg") ;
+        
+        }
+
+        label{
+            font-family: 'Montserrat';
+            color: white;
+
+        }
+
+        .introtext{
+            padding: 40px;
+            margin-left: 30px;
+            margin-bottom: 30px;
+            width: 90%;
+            word-wrap: normal;
+            word-spacing:3px;
+            line-height: 30px;
+            text-align: justify;
+            background-color: white;
+            border-radius: 20px;
+
+        }
+
+        .intro-container{
+            display: flex; 
+            justify-content: center; 
+            align-items: center;"
+            margin-top: 2%;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        .introphoto {
+            border-radius: 60px;
+        }
+
+
+        .introbutton  {
+         background-color: #7A0BC0;
+         padding: 18px 20px;
+         border-radius: 7px;
+         transition: .1s;
+         color: #fff;
+         border: none;
+         font-family: 'Montserrat';
+         width: 30%;
+         font-size: 20px;
+        }
+
+        .introbutton:hover {
+         background-color: transparent;
+         color: white;
+         border: 3px solid white;
+        }
+
+        .introbutton:focus {
+         box-shadow: 0px 0px 0px 5px rgba(20, 87, 244, 0.37), 0px 0px 0px 10px rgba(20, 87, 244, 0.38);
+         outline: none;
+        }
+
+
+
+        .content-container {
+          width: inherit;
+          height: 254px;
+          background: none;
+          display: flex;
+          gap: 5px;
+          padding: 1em;
+          font-family: 'Montserrat';
+          justify-content: center;
+          border-radius: 80px 0px 80px;
+          margin-bottom: 70px;
+        }
+
+        .content-container p, .content-container a  {
+          height: 100%;
+          flex: 1;
+          overflow: hidden;
+          cursor: pointer;
+          border-radius: 2px;
+          transition: all .5s;
+          background: #7A0BC0;
+          
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 20px;
+          text-decoration: none;
+        }
+
+        .content-container p:hover, .content-container a:hover{
+          flex: 4;
+          text-decoration: none;
+        }
+
+        .content-container p span {
+          min-width: 14em;
+          padding: .5em;
+          text-align: center;
+          transform: rotate(-90deg);
+          transition: all .5s;
+          text-transform: uppercase;
+          color: white;
+          letter-spacing: .1em;
+        }
+
+        .content-container p:hover span {
+          transform: rotate(0);
+        }
+
+        .photos-container{
+            display: flex;
+            gap: 25px;
+            width: inherit;
+            justify-content: center;
+
+        }
+
+
+        /* defaults */
+       
+       
+
+
+        /* modal */
+        .modal-container {
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 10;
+
+          display: none;
+          justify-content: center;
+          align-items: center;
+
+          width: 100%;
+          height: 100%;
+          border: 2px solid white;
+
+          /* --m-background is set as inline style */
+          
+        }
+
+        /* using :target */
+        /*
+        when users will click/enter button(link) browser will add a #id in a url and when that happens we'll show our users the modal that contains that id.
+        */
+        .modal-container:target {
+          display: flex;
+        }
+
+        .modal {
+          width: 60rem;
+          padding: 4rem 2rem;
+          border-radius: .8rem;
+
+          color: var(--light);
+          background: var(--background);
+          box-shadow: var(--m-shadow, .4rem .4rem 10.2rem .2rem) var(--shadow-1);
+          position: relative;
+
+          overflow: hidden;
+
+        }
+
+        .modal__title {
+          font-size: 2.2rem;
+          font-family: 'Montserrat';
+          margin-left: 30px;
+        }
+
+        .modal__text {
+          padding: 10px;
+          margin-left: 30px;
+          width: 85%; 
+          word-wrap:normal;
+          font-size: 20px;
+          line-height: 2;
+          font-family: 'Montserrat';
+        }
+
+        .modal__btn {
+          margin-top: 4rem;
+          padding: 1rem 1.6rem;
+          border:  none;
+          border-radius: 100rem;
+
+          color: inherit;
+          background: transparent;
+          font-size: 1.4rem;
+          font-family: inherit;
+          letter-spacing: .2rem;
+
+          transition: .2s;
+          cursor: pointer;
+        }
+
+        .modal__btn:nth-of-type(1) {
+          margin-right: 1rem;
+        }
+
+        .modal__btn:hover,
+        .modal__btn:focus {
+          background: var(--focus);
+          border-color: var(--focus);
+          
+        }
+
+
+        /* link-... */
+        .link-1 {
+          font-size: 1.8rem;
+
+          color: var(--light);
+          background: var(--background);
+          box-shadow: .4rem .4rem 2.4rem .2rem var(--shadow-1);
+          border-radius: 100rem;
+          padding: 1.4rem 3.2rem;
+
+          transition: .2s;
+        }
+
+        .link-1:hover,
+        .link-1:focus {
+    
+          box-shadow: 0 0 4.4rem .2rem var(--shadow-2);
+        }
+
+        .link-1:focus {
+          box-shadow:
+            0 0 4.4rem .2rem var(--shadow-2),
+            0 0 0 .4rem var(--global-background),
+            0 0 0 .5rem var(--focus);
+        }
+
+        .link-2 {
+          width: 4rem;
+          height: 4rem;
+          border: 1px solid var(--border-color);
+          border-radius: 100rem;
+
+          color: inherit;
+          font-size: 2.2rem;
+
+          position: absolute;
+          top: 2rem;
+          right: 2rem;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          transition: .2s;
+        }
+
+        .link-2::before {
+          content: '×';
+        }
+
+        .link-2:hover,
+        .link-2:focus {
+          background: var(--focus);
+          border-color: var(--focus);
+
+        }
+
+
+        .flip-card {
+          background-color: transparent;
+          width: 800px;
+          height: 400px;
+          perspective: 1000px;
+          font-family: 'Montserrat';
+;
+
+        }
+
+        .title {
+          font-size: 2.5em;
+          font-weight: 900;
+          text-align: center;
+          margin: 0;
+          font-family: 'Montserrat';
+        }
+
+        .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.8s;
+          transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+          box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          
+          border-radius: 4rem;
+        }
+
+        .flip-card-front {
+          background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+          color: white;
+        }
+
+        .flip-card-back {
+          background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+          color: white;
+          transform: rotateY(180deg);
+        }
+
+
+            .card1_load {
+              width: 300px;
+              height: 300px;
+              position: relative;
+              float: left;             
+              margin-left: 5%;
+              margin-right: 5%;
+
+            }
+
+
+           ul{
+            font-size: 15px;
+            font-family: 'Montserrat';
+            margin-left: 5%;
+            word-wrap: normal;
+            width: 80%;
+           }
+
+
+           .mySlides {display:none}
+        
+
+        .gallery-container {
+          position: relative;
+          border:5px solid var(--main-blk-color);
+          justify-content: ;
+        }
+
+        .caption-container {
+          text-align: center;
+          background-color: var(--main-blk-color);
+          padding: 2px 16px;
+          font-size: 20px;
+        }
+
+        .imgSlide img {
+            display:block;
+            justify-content: left;
+        }
+
+
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 40%;
+          width: auto;
+          padding: 16px;
+          margin-top: -50px;
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+
+
+        .next {
+          margin-left: 124%;
+          border-radius: 3px 0 0 3px;
+        }
+
+
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+
+
+        .container, p, h1 {
+          width:77%;
+          
+        }
